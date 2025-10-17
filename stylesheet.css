@@ -1,0 +1,104 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "serif";
+    src: url(/assets/fonts/Belgiano-Serif.ttf) format(truetype);
+}
+@font-face {
+    font-family: "champagne";
+    src: url(assets/fonts/Champagne.ttf);
+}
+@font-face {
+    font-family: "champagne-italic";
+    src: url(assets/fonts/Champagne.ttf);
+}
+
+html {
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    --primary-font: "serif";
+    --secondary-font: "champagne";
+    --tertiary-font: "champagne-italic";
+
+    --accent-color-one: #5b4e3e;
+    --accent-color-two: #8B2A83;
+    --darker-color: #252424;
+    --lighter-color: #F8F8F8;
+    --background-colour: #faf6ef;
+
+}
+
+h1, h2, h3 {
+    font-family: var(--primary-font);
+}
+h1 {
+    font-size: clamp(2.25em, 8vw, 4em);
+    color: var(--accent-color-one);
+}
+h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--accent-color-one);
+    padding-bottom: .5em;
+}
+h3 {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    color: var(--accent-color-one);
+    padding-bottom: .5em;
+}
+p, li {
+    font-family: var(--secondary-font);
+    font-size: clamp(1.25em, 3vw, 1.5em);
+    color: var(--darker-color);
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--secondary-font);
+    font-size: clamp(1em, 3vw, 1.25em);
+    color: var(--accent-color-one);
+}
+
+summary {
+    font-family: var(--primary-font);
+    font-size: 1.5em;
+}
+
+a:hover {
+    color: var(--accent-color-two);
+    font-weight: 700;
+}
+
+button {
+    background-color: var(--accent-color-one);
+    color: var(--background-colour);
+    font-family: var(--secondary-font);
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+
+    &:hover {
+        background-color: var(--background-colour);
+        color: var(--accent-color-one);
+        border: 1px solid var(--accent-color-one);
+    }
+}
+
+img {
+    border: 1.5px solid var(--accent-color-one);
+}
+.underline {
+    text-decoration: underline;
+}
