@@ -8,6 +8,10 @@ header {
     p {
         padding-bottom: 1rem;
     }
+    a:hover {
+        border: none;
+        padding: 0;
+    }
 }
 
 nav {
