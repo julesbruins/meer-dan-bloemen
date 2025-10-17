@@ -119,15 +119,12 @@ nav {
 }
 
 section.over-ons {
-    p {
-        padding-bottom: 1.5em;
-    }
-
     /* PHOTO SELECTOR */
     div {
         display: grid;
         width: 100%;
         gap: 1em;
+        padding-bottom: 1.5em;
 
         >img {
             position: relative;
@@ -245,8 +242,8 @@ section.ons-aanbod {
     }
 
     dialog {
-        width: 70%;
-        height: 70%;
+        width: 70vw;
+        height: 70vh;
         background-color: var(--background-colour);
         border:  1px solid var(--accent-color-one);
         border-radius: 1em;
@@ -267,7 +264,7 @@ section.ons-aanbod {
                 display: none;
             }
             img {
-                width: 65%;
+                width: 55vw;
             }
     }
     dialog::backdrop {
