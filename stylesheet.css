@@ -51,7 +51,6 @@ h2 {
 h3 {
     font-size: clamp(1rem, 5vw, 1.5rem);
     color: var(--accent-color-one);
-    padding-bottom: .5em;
 }
 p, li {
     font-family: var(--secondary-font);

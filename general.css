@@ -63,10 +63,6 @@ footer {
 }
 
 header {
-    h1 {
-        padding-top: 1em;
-    }
-
     h1,
     p {
         display: flex;
@@ -216,6 +212,10 @@ section.over-ons {
         height: 20vh;
         
     }
+
+    @media (width > 38em) {
+        display: none;
+    }
 }
 
 
@@ -269,10 +269,9 @@ section.ons-aanbod {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
+        p {
+            padding-bottom: 1em;
+        }
         button {
             width: min-content;
         }
@@ -290,14 +289,11 @@ section.ons-aanbod {
                 height: 45vh;
             }
     }
-    
+
     dialog::backdrop {
         background-color: var(--accent-color-one);
         opacity: .3;
     }
-
-    
-
 }
 
 section.content {
@@ -347,12 +343,44 @@ section.content {
 
 footer {
     border-top: 1px solid black;
-
-    h3 {
-        padding-top: 1em;
+    h2 {
+        padding: 0 0 0 0;
     }
-    img {
-        opacity: .1;
-        border: none;
+    h3 {
+        padding: 1em 0 .5em;
+    }
+    .phone {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (width > 1000px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+
+        h2 {
+            grid-row: 1;
+            grid-column: 1/4;
+        }
+        h3 {
+            grid-row: 2;
+        }
+        h3:nth-of-type(1), p {
+            grid-column: 1/2;
+        }
+        h3:nth-of-type(2), 
+        .phone  {
+            grid-column: 2/3;
+        }
+        .phone {
+            grid-row: 3;
+        }
+        h3:nth-of-type(3) {
+            grid-column: 3/4;
+        }
+
+        
     }
 }
