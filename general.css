@@ -1,65 +1,11 @@
 body {
     background-color: var(--background-colour);
-    padding: 1em;
-
-    .background-1, 
-    .background-2,
-    .background-3,
-    .background-4 {
-        position: absolute;
-        border: none;
-        left: -100%;
-    }
-    /* .background-1 {
-        left: -100%;
-    }
-    .background-2 {
-        right: -100%;
-    }
-    .background-3 {
-        top: -150%;
-    }
-    .background-4 {
-        top: -200%;
-    } */
-
-    @media (width > 60em) {
-        .background-1, 
-        .background-2,
-        .background-3,
-        .background-4 {
-            height: 30em;
-            position: absolute;
-            overflow: hidden;
-            border: none;
-            opacity: .2;
-            z-index: -10;
-        }
-        .background-1 {
-            left: -13em;
-            top: 15em;
-        }
-        .background-2 {
-            top: -21em;
-            rotate: 235deg;
-            left: 3em;
-        }
-        .background-3 {
-            top: 50em;
-            rotate: 135deg;
-            left: -18em;
-        }
-        .background-4 {
-            top: 100em;
-            rotate: 15deg;
-            left: -15em;
-        }
-    }
+    padding: var(--sm);
 }
 
 section,
 footer {
-    padding-top: 3em;
+    padding-top: 3rem;
 }
 
 header {
@@ -70,7 +16,7 @@ header {
     }
 
     p {
-        padding-bottom: 1em;
+        padding-bottom: 1rem;
     }
 }
 
@@ -78,9 +24,9 @@ nav {
     z-index: 2;
 
     ul {
-        padding: .5em 2em;
+        padding: var(--xs) 2rem;
         background-color: var(--accent-color-one);
-        border-radius: 1em;
+        border-radius: var(--border-radius);
 
         display: grid;
         grid-template-rows: 1fr 1fr;
@@ -118,12 +64,13 @@ nav {
 }
 
 section.over-ons {
+    margin: 0 auto;
     /* PHOTO SELECTOR */
     div {
         display: grid;
         width: 100%;
-        gap: 1em;
-        padding-bottom: 1.5em;
+        gap: var(--sm);
+        padding-bottom: var(--md);
 
         >img {
             position: relative;
@@ -134,26 +81,24 @@ section.over-ons {
             object-fit: cover;
 
             display: block;
-            border-radius: 10em 10em 0 0;
+            border-radius: 10rem 10rem 0 0;
         }
     }
-
     div:has([value="foto-1"]:checked) #foto-1,
     div:has([value="foto-2"]:checked) #foto-2,
     div:has([value="foto-3"]:checked) #foto-3,
     div:has([value="foto-4"]:checked) #foto-4 {
         z-index: 1;
     }
-
     form {
         display: flex;
-        gap: 1em;
+        gap: var(--sm);
 
         label {
             display: block;
             position: relative;
 
-            height: 5em;
+            height: 5rem;
             flex-grow: 1;
         }
 
@@ -171,21 +116,21 @@ section.over-ons {
             height: 100%;
             display: block;
             object-fit: cover;
-            border-radius: 1em;
+            border-radius: var(--border-radius);
 
             opacity: .5;
         }
     }
-
     form label:has( :checked) img {
         opacity: 1;
     }
 
-    @media (width > 38em) {
+
+    @media (width > 38rem) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min-content 1fr;
-        column-gap: 1em;
+        column-gap: var(--sm);
 
         p {
             grid-column: 1;
@@ -195,8 +140,8 @@ section.over-ons {
             grid-row: 1/3;
         }
     }
-    @media (width > 60em) {
-        column-gap: 3em;
+    @media (width > 60rem) {
+        column-gap: 3rem;
         max-width: 75%;
         justify-self: center;
     }
@@ -205,23 +150,28 @@ section.over-ons {
 .image-container {
     display: flex;
     overflow-x: scroll;
-    gap: 1em;
-    padding-top: 3em;
+    gap: var(--sm);
+    padding-top: 3rem;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     img {
         height: 20vh;
-        
+        border-radius: var(--border-radius);
     }
 
-    @media (width > 38em) {
+    @media (width > 38rem) {
         display: none;
     }
 }
 
-
 section.ons-aanbod {
+    margin: 0 auto;
+
     p {
-        padding-bottom: 1.5em;
+        padding-bottom: var(--md);
     }
     button {
         margin-bottom: 1.5rem;
@@ -237,7 +187,7 @@ section.ons-aanbod {
     summary {
         display: flex;
         justify-content: space-between;
-        padding: .5em;
+        padding: var(--xs);
         color: var(--accent-color-one);
     }
 
@@ -251,7 +201,7 @@ section.ons-aanbod {
         content: "-";
     }
 
-    @media (width > 60em) {
+    @media (width > 60rem) {
         max-width: 75%;
         justify-self: center;
     }
@@ -261,8 +211,8 @@ section.ons-aanbod {
         height: 70vh;
         background-color: var(--background-colour);
         border:  1px solid var(--accent-color-one);
-        border-radius: 1em;
-        padding: 1em;
+        border-radius: var(--border-radius);
+        padding: var(--sm);
 
         position: fixed;
         top: 50%;
@@ -270,7 +220,7 @@ section.ons-aanbod {
         transform: translate(-50%, -50%);
 
         p {
-            padding-bottom: 1em;
+            padding-bottom: var(--sm);
         }
         button {
             width: min-content;
@@ -279,18 +229,17 @@ section.ons-aanbod {
         .scroll-dialog {
             display: flex;
             overflow-x: scroll;
-            gap: 1em;
-            padding-bottom: 1em;
+            gap: var(--sm);
+            padding-bottom: var(--sm);
         }
             ::-webkit-scrollbar {
                 display: none;
             }
             img {
                 height: 45vh;
-                border-radius: 1em;
+                border-radius: var(--border-radius);
             }
     }
-
     dialog::backdrop {
         background-color: var(--accent-color-one);
         opacity: .3;
@@ -298,45 +247,46 @@ section.ons-aanbod {
 }
 
 section.content {
+    margin: 0 auto;
 
     p {
-        padding-bottom: 1.5em;
+        padding-bottom: var(--md);
     }
     .photo-collage {
+        display: grid;
+        gap: var(--sm);
+        padding-bottom: 5rem;
+
         img {
            object-fit: cover;
            width: 100%;
            height: 100%;
 
-           border-radius: 1em;
+           border-radius: var(--border-radius);
         }
 
-        display: grid;
-        gap: 1em;
-        padding-bottom: 5em;
-
-         @media (width > 30em) {
+        @media (width > 30rem) {
             img {
-                height: 12em;
+                height: 12rem;
             }
-
             grid-template-columns: 1fr 1fr;
-            gap: 1.5em;
+            gap: var(--md);
             justify-self: center;
         }
 
-        @media (width > 44em) {
+        @media (width > 44rem) {
             img {
-                height: 12em;
+                height: 12rem;
             }
 
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
-            gap: 1.5em;
+            gap: var(--md);
             justify-self: center;
         }
     }
-    @media (width > 60em) {
+
+    @media (width > 60rem) {
         max-width: 75%;
         justify-self: center;
     }
@@ -344,16 +294,28 @@ section.content {
 
 footer {
     border-top: 1px solid black;
+
     h2 {
         padding: 0 0 0 0;
     }
     h3 {
-        padding: 1em 0 .5em;
+        padding: var(--sm) 0 var(--xs);
     }
     .phone {
         display: flex;
         flex-direction: column;
     }
+    img {
+        border: none;
+        height: 30vh;
+        align-self: center;
+    }
+    a:hover {
+        text-decoration: underline;
+        border: none;
+        padding: 0;
+    }
+
 
     @media (width > 1000px) {
         display: grid;
@@ -380,8 +342,54 @@ footer {
         }
         h3:nth-of-type(3) {
             grid-column: 3/4;
-        }
-
-        
+        }        
     }
 }
+
+.background-flowers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* voorkomt dat bloemen klikken blokkeren */
+    overflow: hidden;
+    z-index: -1; /* achter je content */
+
+    .flower {
+        position: absolute;
+        opacity: 0.3;
+        transition: opacity 0.3s ease;
+        border: none;
+        height: 40vh;
+    }
+
+
+    .flower1 {
+        top: 60vh;
+        left: -15vw;
+        /* rotate: 40deg; */
+    }
+
+    .flower2 {
+        transform: rotateY(180deg);
+        right: 10vw;
+        top: 85vh;
+    }
+
+    .flower3 {
+        top: 40vh;
+        right: -15vw;
+        rotate: -40deg;
+    }
+    .flower4 {
+        top: -22vh;
+        rotate: 120deg;
+        left: -5vw;
+        transform: rotateY(165deg);
+    }
+
+    @media (max-width: 60rem) {
+        display: none;
+    }
+}    
