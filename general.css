@@ -260,17 +260,23 @@ section.ons-aanbod {
         .scroll-dialog {
             display: flex;
             overflow-x: scroll;
+            gap: 1em;
+            padding-bottom: 1em;
         }
                     ::-webkit-scrollbar {
                 display: none;
             }
             img {
-                width: 40%;
+                width: 65%;
             }
     }
     dialog::backdrop {
         background-color: var(--accent-color-one);
         opacity: .3;
+    }
+
+    @media (width > 520px) {
+        
     }
 
 }
