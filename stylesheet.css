@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: "serif";
-    src: url(/assets/fonts/Belgiano-Serif.ttf) format(truetype);
+    src: url(/assets/fonts/Belgiano-Serif.ttf);
 }
 @font-face {
     font-family: "champagne";
@@ -109,4 +109,14 @@ img {
 }
 .underline {
     text-decoration: underline;
+}
+
+body {
+    background-color: var(--background-colour);
+    padding: var(--sm);
+}
+
+section,
+footer {
+    padding-top: 3rem;
 }

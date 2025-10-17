@@ -1,13 +1,3 @@
-body {
-    background-color: var(--background-colour);
-    padding: var(--sm);
-}
-
-section,
-footer {
-    padding-top: 3rem;
-}
-
 header {
     h1,
     p {
@@ -159,6 +149,8 @@ section.over-ons {
 
     img {
         height: 20vh;
+        width: 35vw;
+        object-fit: cover;
         border-radius: var(--border-radius);
     }
 
@@ -309,6 +301,9 @@ footer {
         border: none;
         height: 30vh;
         align-self: center;
+    }
+    a {
+        font-size: clamp(1.25em, 3vw, 1.5em)
     }
     a:hover {
         text-decoration: underline;
