@@ -242,7 +242,7 @@ section.ons-aanbod {
     }
 
     dialog {
-        width: 70vw;
+        width: 85vw;
         height: 70vh;
         background-color: var(--background-colour);
         border:  1px solid var(--accent-color-one);
@@ -264,7 +264,7 @@ section.ons-aanbod {
                 display: none;
             }
             img {
-                width: 55vw;
+                width: 60vw;
             }
     }
     dialog::backdrop {
