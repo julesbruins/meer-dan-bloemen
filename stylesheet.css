@@ -75,8 +75,11 @@ summary {
 }
 
 a:hover {
-    color: var(--accent-color-two);
-    font-weight: 700;
+        background-color: var(--background-colour);
+        color: var(--accent-color-one);
+        border: 1px solid var(--accent-color-one);
+        border-radius: .5em;
+        padding: .25em;
 }
 
 button {
